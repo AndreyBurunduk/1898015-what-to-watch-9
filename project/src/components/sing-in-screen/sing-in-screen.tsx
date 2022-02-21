@@ -1,4 +1,4 @@
-function SignIn(): JSX.Element {
+function SignInScreen(): JSX.Element {
   return (
     <>
       <div className="visually-hidden">
@@ -80,4 +80,4 @@ function SignIn(): JSX.Element {
 }
 
 
-export default SignIn;
+export default SignInScreen;

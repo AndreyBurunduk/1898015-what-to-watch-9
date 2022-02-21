@@ -1,4 +1,4 @@
-function Player (): JSX.Element {
+function PlayerScreen (): JSX.Element {
 
   return (
     <div className="player">
@@ -36,4 +36,4 @@ function Player (): JSX.Element {
   );
 }
 
-export default Player;
+export default PlayerScreen;

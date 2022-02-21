@@ -1,4 +1,4 @@
-function MyList(): JSX.Element {
+function MyListScreen(): JSX.Element {
   return (
     <>
       <div className="visually-hidden">
@@ -162,4 +162,4 @@ function MyList(): JSX.Element {
 }
 
 
-export default MyList;
+export default MyListScreen;
