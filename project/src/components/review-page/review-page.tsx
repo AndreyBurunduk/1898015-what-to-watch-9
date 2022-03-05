@@ -1,4 +1,4 @@
-function AddReviewScreen (): JSX.Element {
+function ReviewPage(): JSX.Element {
   return (
     <section className="film-card film-card--full">
       <div className="film-card__header">
@@ -23,7 +23,7 @@ function AddReviewScreen (): JSX.Element {
                 <a href="film-page.html" className="breadcrumbs__link">The Grand Budapest Hotel</a>
               </li>
               <li className="breadcrumbs__item">
-                <a href="/#" className="breadcrumbs__link">Add review</a>
+                <a className="breadcrumbs__link">Add review</a>
               </li>
             </ul>
           </nav>
@@ -35,7 +35,7 @@ function AddReviewScreen (): JSX.Element {
               </div>
             </li>
             <li className="user-block__item">
-              <a href="/#" className="user-block__link">Sign out</a>
+              <a className="user-block__link">Sign out</a>
             </li>
           </ul>
         </header>
@@ -95,4 +95,4 @@ function AddReviewScreen (): JSX.Element {
   );
 }
 
-export default AddReviewScreen;
+export default ReviewPage;
