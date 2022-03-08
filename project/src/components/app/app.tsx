@@ -1,7 +1,7 @@
-import MainPage from '../main-page/main-page';
 import { AppRoute, AuthorizationStatus } from '../../const';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import MainPage from '../main-page/main-page';
 import ReviewPage from '../review-page/review-page';
 import PlayerPage from '../player-page/player-page';
 import SignInPage from '../sing-in-page/sing-in-page';
