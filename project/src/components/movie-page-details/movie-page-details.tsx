@@ -1,5 +1,6 @@
 function MoviePageDetails(): JSX.Element {
   return (
+
     <div className="film-card__text film-card__row">
       <div className="film-card__text-col">
         <p className="film-card__details-item">
@@ -24,7 +25,6 @@ function MoviePageDetails(): JSX.Element {
           </span>
         </p>
       </div>
-
       <div className="film-card__text-col">
         <p className="film-card__details-item">
           <strong className="film-card__details-name">Run Time</strong>
@@ -40,6 +40,8 @@ function MoviePageDetails(): JSX.Element {
         </p>
       </div>
     </div>
+
+
   );
 }
 
