@@ -3,7 +3,6 @@ type CatalogGenresItemsProps = {
   active: string,
 }
 
-
 function CatalogGenre({ genre, active }: CatalogGenresItemsProps): JSX.Element {
 
   return (
