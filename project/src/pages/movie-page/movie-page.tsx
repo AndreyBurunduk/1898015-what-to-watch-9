@@ -5,11 +5,11 @@ import MoviePageOverview from '../../components/movie-page-overview/movie-page-o
 import Footer from '../../components/footer/footer';
 import { FilmType } from '../../types/types';
 
-type Props = {
+type MoviePageProps = {
   catalogFilms: FilmType[];
 };
 
-function MoviePage({catalogFilms}: Props): JSX.Element {
+function MoviePage({catalogFilms}: MoviePageProps): JSX.Element {
   return (
     <>
       <section className='film-card film-card--full'>

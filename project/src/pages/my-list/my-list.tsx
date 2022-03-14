@@ -4,11 +4,11 @@ import UserBlock from '../../components/user-block/user-block';
 import Footer from '../../components/footer/footer';
 import { FilmType } from '../../types/types';
 
-type Props = {
+type MyListProps = {
   catalogFilms: FilmType[];
 };
 
-function MyList({catalogFilms}: Props): JSX.Element {
+function MyList({catalogFilms}: MyListProps): JSX.Element {
   return (
     <div className='user-page'>
       <header className='page-header user-page__head'>

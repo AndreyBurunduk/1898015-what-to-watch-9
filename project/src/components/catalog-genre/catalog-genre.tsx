@@ -3,11 +3,12 @@ type CatalogGenresItemsProps = {
   active: string,
 }
 
+
 function CatalogGenre({ genre, active }: CatalogGenresItemsProps): JSX.Element {
 
   return (
     <li className={`catalog__genres-item ${active}`}>
-      <a href='.' className='catalog__genres-link'>
+      <a href='/#' className='catalog__genres-link'>
         {genre}
       </a>
     </li>
