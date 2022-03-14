@@ -10,12 +10,13 @@ import NotFound from '../not-found/not-found';
 import PrivateRoute from '../private-route/private-route';
 import { FilmType } from '../../types/types';
 
-type Props = {
+type AppProps = {
   catalogFilms: FilmType[];
 };
 
 
-function App({catalogFilms} : Props): JSX.Element {
+function App({catalogFilms} : AppProps): JSX.Element {
+  const [film] = catalogFilms;
 
   return (
     <BrowserRouter>
@@ -48,7 +49,7 @@ function App({catalogFilms} : Props): JSX.Element {
         />
         <Route
           path={AppRoute.Player}
-          element={<Player />}
+          element={<Player film={film}/>}
         />
         <Route
           path='*'

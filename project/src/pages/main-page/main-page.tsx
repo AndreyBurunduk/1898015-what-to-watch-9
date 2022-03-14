@@ -6,11 +6,11 @@ import Footer from '../../components/footer/footer';
 import { FilmType } from '../../types/types';
 import { AppRoute } from '../../const';
 
-type Props = {
+type MainPageProps = {
   catalogFilms: FilmType[];
 };
 
-function MainPage({ catalogFilms }: Props): JSX.Element {
+function MainPage({ catalogFilms }: MainPageProps): JSX.Element {
   const navigate = useNavigate();
 
   return (
