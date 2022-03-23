@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AppRoute, AuthorizationStatus } from '../../const';
+import { AppRoute } from '../../const';
 import MainPage from '../../pages/main-page/main-page';
 import AddReview from '../../pages/add-review/add-review';
 import MyList from '../../pages/my-list/my-list';
@@ -8,22 +8,25 @@ import Player from '../../pages/player/player';
 import SignIn from '../../pages/sing-in/sing-in';
 import NotFound from '../not-found/not-found';
 import PrivateRoute from '../private-route/private-route';
-import { FilmType } from '../../types/types';
-
-type AppProps = {
-  catalogFilms: FilmType[];
-};
+import LoadingScreen from '../loading-screen/loading-screen';
+import { useAppSelector } from '../../hooks';
 
 
-function App({catalogFilms} : AppProps): JSX.Element {
-  const [film] = catalogFilms;
+function App(): JSX.Element {
+  const {authorizationStatus, isDataLoaded, films} = useAppSelector((state) => state);
+
+  if(!isDataLoaded) {
+    return (
+      <LoadingScreen />
+    );
+  }
 
   return (
     <BrowserRouter>
       <Routes>
         <Route
           path={AppRoute.Main}
-          element={<MainPage catalogFilms={catalogFilms}/>}
+          element={<MainPage catalogFilms={films}/>}
         />
         <Route
           path={AppRoute.Login}
@@ -33,15 +36,15 @@ function App({catalogFilms} : AppProps): JSX.Element {
           path={AppRoute.MyList}
           element={
             <PrivateRoute
-              authorizationStatus={AuthorizationStatus.NoAuth}
+              authorizationStatus={authorizationStatus}
             >
-              <MyList catalogFilms={catalogFilms}/>
+              <MyList catalogFilms={films}/>
             </PrivateRoute>
           }
         />
         <Route
           path={AppRoute.Films}
-          element={<MoviePage catalogFilms={catalogFilms}/>}
+          element={<MoviePage catalogFilms={films}/>}
         />
         <Route
           path={AppRoute.Filmsreview}
@@ -49,7 +52,7 @@ function App({catalogFilms} : AppProps): JSX.Element {
         />
         <Route
           path={AppRoute.Player}
-          element={<Player film={film}/>}
+          element={<Player film={films[0]}/>}
         />
         <Route
           path='*'
