@@ -31,7 +31,7 @@ function PlayerCart({ film, isActive }: PlayerCartProps): JSX.Element {
         clearTimeout(timeout);
       }
     };
-  }, [film, isActive]);
+  }, [film]);
 
 
   return (
