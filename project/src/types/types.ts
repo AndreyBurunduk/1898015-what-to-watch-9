@@ -1,4 +1,5 @@
 export type FilmType = {
+  id: number,
   name: string,
   posterImage: string,
   previewImage: string,
@@ -12,8 +13,14 @@ export type FilmType = {
   runTime: number,
   genre: string,
   released: number,
-  id: number,
   isFavorite: boolean,
   videoLink: string,
   previewVideoLink: string,
 };
+
+export type NewReviewData = {
+  comment: string
+  rating: number
+  filmId: number
+  setIsSavingCb:  React.Dispatch<React.SetStateAction<boolean>>
+}

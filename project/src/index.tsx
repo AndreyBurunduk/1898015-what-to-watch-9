@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import App from './components/app/app';
-import ErrorMessage from './components/error-Message/errorMessage';
+import ErrorMessage from './components/error-Message/error-message';
 import { store } from './store';
 import { fetchFilmsAction, fetchPromoFilmAction, checkAuthAction } from './store/api-actions';
 
