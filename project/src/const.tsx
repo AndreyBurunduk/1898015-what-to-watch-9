@@ -3,8 +3,11 @@ export enum AppRoute {
   Login = '/login',
   MyList = '/mylist',
   Films = '/films/:id',
+  Film = '/films/',
   Filmsreview = '/films/:id/review',
-  Player = '/player/:id'
+  Player = '/player/:id',
+  PlayerId = '/player/',
+  MoviePageReviews = '/films/:id/rewies',
 }
 
 export const TIMEOUT_SHOW_ERROR = 2000;
@@ -24,16 +27,16 @@ export enum AuthorizationStatus {
 export enum APIRoute {
   Films = '/films',
   Film = '/films/:id',
-  SimilarFilm = '/films/:id/similar',
+  SimilarFilm = '/films/',
   PromoFilm = '/promo',
   Favorite = '/favorite',
   FavoriteStatus= '/favorite/:id/status',
-  Comments = '/comments/:id',
+  Comments = '/comments/',
   Login = '/login',
   Logout = '/logout',
 }
 
-export const filmNavLink = [
+export const filmNavLinks = [
   {
     id: 1,
     link: 'Overview',
@@ -50,6 +53,7 @@ export const filmNavLink = [
     active: '',
   },
 ];
+
 
 export const catalogGenresItems = [
   {
@@ -85,7 +89,7 @@ export const catalogGenresItems = [
     active: '',
   }];
 
-export const RATING_VALUE = [
+export const RATING_VALUES = [
   {
     value: 10,
   },

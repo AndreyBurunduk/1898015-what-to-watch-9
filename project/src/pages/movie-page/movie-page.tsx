@@ -24,7 +24,7 @@ function MoviePage(): JSX.Element {
     }
   }, [dispatch, id]);
 
-  const { film, review, authorizationStatus, similarFilms, isFavorite } = useAppSelector((state) => state);
+  const { film, reviews, authorizationStatus, similarFilms, isFavorite } = useAppSelector((state) => state);
 
   return (
     <>
@@ -51,7 +51,7 @@ function MoviePage(): JSX.Element {
 
               <div className='film-card__buttons'>
                 <button className='btn btn--play film-card__button' type='button'>
-                  <Link to={`${AppRoute.Player}${film.id}`} style={{ textDecoration: 'none', color: '#EEE5B5' }}>
+                  <Link to={`${AppRoute.PlayerId}${film.id}`} style={{ textDecoration: 'none', color: '#EEE5B5' }}>
                     <svg viewBox='0 0 19 19' width='19' height='19'>
                       <use xlinkHref='#play-s'></use>
                     </svg>
@@ -62,7 +62,7 @@ function MoviePage(): JSX.Element {
                 <FavoriteButton id={film.id} film={film} isFavorite={isFavorite}/>
 
                 {authorizationStatus === AuthorizationStatus.Auth ?
-                  <Link to={`${AppRoute.Films}${film.id}/review`} className='btn film-card__button'>Add review</Link>
+                  <Link to={`${AppRoute.Film}${film.id}/review`} className='btn film-card__button'>Add review</Link>
                   : <Link to={AppRoute.Login} className='btn film-card__button'>Add review</Link>}
               </div>
 
@@ -81,7 +81,7 @@ function MoviePage(): JSX.Element {
                 <FilmNavList />
               </nav>
 
-              <FilmCardInfo film={film} review={review} />
+              <FilmCardInfo film={film} reviews={reviews} />
 
             </div>
           </div>
