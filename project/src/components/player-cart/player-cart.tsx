@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { FilmType } from '../../types/types';
 
-type PlayerCartProps = {
+type Props = {
   film: FilmType;
   isActive: boolean;
 };
@@ -9,7 +9,7 @@ type PlayerCartProps = {
 const VIDEO_DELAY = 1000;
 
 
-function PlayerCart({ film, isActive }: PlayerCartProps): JSX.Element {
+function PlayerCart({ film, isActive }: Props): JSX.Element {
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -31,7 +31,7 @@ function PlayerCart({ film, isActive }: PlayerCartProps): JSX.Element {
         clearTimeout(timeout);
       }
     };
-  }, [film]);
+  }, [film, isActive]);
 
 
   return (
