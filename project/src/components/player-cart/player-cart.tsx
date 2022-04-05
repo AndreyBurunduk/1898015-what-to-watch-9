@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { FilmType } from '../../types/types';
 
-type Props = {
+type PlayerCartProps = {
   film: FilmType;
   isActive: boolean;
 };
@@ -9,7 +9,7 @@ type Props = {
 const VIDEO_DELAY = 1000;
 
 
-function PlayerCart({ film, isActive }: Props): JSX.Element {
+function PlayerCart({ film, isActive }: PlayerCartProps): JSX.Element {
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
