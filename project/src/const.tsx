@@ -1,3 +1,9 @@
+//ВОЛШЕБНЫЕ ЧИСЛА))
+export const THREE = 3;
+export const FIVE = 5;
+export const EIGHT = 8;
+export const TEN = 10;
+
 export enum AppRoute {
   Main = '/',
   Login = '/login',
@@ -89,38 +95,7 @@ export const catalogGenresItems = [
     active: '',
   }];
 
-export const RATING_VALUES = [
-  {
-    value: 10,
-  },
-  {
-    value: 9,
-  },
-  {
-    value: 8,
-  },
-  {
-    value: 7,
-  },
-  {
-    value: 6,
-  },
-  {
-    value: 5,
-  },
-  {
-    value: 4,
-  },
-  {
-    value: 3,
-  },
-  {
-    value: 2,
-  },
-  {
-    value: 1,
-  },
-];
+export const RATING_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 
 export const PROMO_FILM = {
   name: 'War of the Worlds',

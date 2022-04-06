@@ -1,16 +1,16 @@
-import { SCORE_FILM } from '../const';
+import { SCORE_FILM, THREE, FIVE, EIGHT, TEN} from '../const';
 
 const getScoreFilm = (rating: number) => {
-  if (rating < 3) {
+  if (rating < THREE) {
     return SCORE_FILM.Bad;
   }
-  if (rating < 5) {
+  if (rating < FIVE) {
     return SCORE_FILM.Normal;
   }
-  if (rating < 8) {
+  if (rating < EIGHT) {
     return SCORE_FILM.Good;
   }
-  if (rating < 10) {
+  if (rating < TEN) {
     return SCORE_FILM.VeryGood;
   }
   return SCORE_FILM.Awesome;
